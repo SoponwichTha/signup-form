@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <div class="container-logo">
+    <h1 id="logo"><i></i>Green Garden</h1>
+    <p id="footer">
+      Made by
+      <a href="https://github.com/SoponwichTha"> <i></i> Soponwich</a>
+    </p>
+  </div>
+
+  <div class="container-main">
+    <div class="form-container" id="formContainer">
+      <div class="top-section" id="topSection">
+        <h2>
+          We will take all your ideas and give you sustainable & practical
+          landscaping solutions that will assist your garden to thrive.
+        </h2>
+        <h4>
+          We do irrigation sod installation tree trimming and fine-gardening
+          services.
+        </h4>
+      </div>
+      <form action="#">
+        <div class="mid-section" id="midSection">
+          <h3>Sign up now!</h3>
+          <div class="data-row">
+            <div class="data">
+              <label for="first-name">*First Name</label>
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                minlength="2"
+                maxlength="20"
+                placeholder="John"
+                required
+              />
+            </div>
+            <div class="data">
+              <label for="last-name">*Last Name</label>
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                minlength="2"
+                maxlength="20"
+                placeholder="Doe"
+                required
+              />
+            </div>
+          </div>
+          <div class="data-row">
+            <div class="data">
+              <label for="email">*Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                minlength="3"
+                maxlength="50"
+                placeholder="john_doe@email.com"
+                required
+              />
+            </div>
+            <div class="data">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="595-595-5599"
+              />
+            </div>
+          </div>
+          <div class="data-row">
+            <div class="data">
+              <label for="password">*Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="6"
+                maxlength="20"
+                placeholder=" "
+                required
+              />
+              <span id="passError"></span>
+            </div>
+            <div class="data">
+              <label for="confirm-password">*Confirm Password</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                minlength="6"
+                maxlength="20"
+                placeholder=" "
+                required
+              />
+              <span id="confirmError"></span>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-section" id="bottomSection">
+          <button type="submit">Sign up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <body></body>
+</html>
