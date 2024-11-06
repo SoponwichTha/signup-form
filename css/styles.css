@@ -1,0 +1,252 @@
+:root {
+  --invalid-color: #ff8000;
+  --invalid-bg-color: #ff800033;
+  --valid-color: #22cc00;
+  --valid-bg-color: #22cc0033;
+  --main-bg-color: #f6f6f6;
+  --btn-color-1: #2e9e95;
+  --btn-color-2: #be641e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: Rubik;
+  font-size: 16px;
+}
+
+.container-logo {
+  width: 36vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container-main {
+  width: 64vw;
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  top: 25%;
+  width: 150%;
+  height: 12rem;
+  line-height: 12rem;
+  background-color: #1b1b1b94;
+  color: #ffffffcc;
+  text-align: center;
+  font-size: 2rem;
+  rotate: 3deg;
+}
+
+.container-logo .title img {
+  object-fit: cover;
+  max-height: 200px;
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
+  rotate: -3deg;
+}
+
+.title p {
+  font-family: "Zen Dots", cursive;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  rotate: -3deg;
+}
+
+.bg-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.container-logo .footer {
+  position: absolute;
+  bottom: 4px;
+  color: #ffffffbf;
+  font-size: 0.8rem;
+}
+
+.footer a {
+  color: #ffffffbf;
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
+
+.top-section,
+.bottom-section {
+  margin-left: 2.5rem;
+}
+
+.top-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+form {
+  background-color: #fff;
+  box-shadow: 0px 3px 3px #ccc;
+  margin: 2.5rem 2px 2rem;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+form > p {
+  width: 100%;
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+form > span {
+  color: rgb(100, 100, 100);
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+form div {
+  position: relative;
+  height: 2.5rem;
+  margin-right: 3rem;
+  margin-top: 1.6rem;
+  flex: 1;
+}
+
+form div label {
+  position: absolute;
+  color: rgb(150, 150, 150);
+  top: 4px;
+  left: 7px;
+  transition: all 0.5s ease;
+}
+
+form div input:focus ~ label,
+form div input:not(:placeholder-shown) ~ label {
+  color: #666;
+  transform: scale(0.8) translate(-1rem, -1.3rem);
+}
+form div label span {
+  color: #c00;
+}
+
+form div input::placeholder {
+  opacity: 0;
+}
+
+form div p {
+  display: none;
+}
+
+form div input:focus:invalid ~ p,
+form div input:not(:placeholder-shown):invalid ~ p {
+  display: initial;
+  position: absolute;
+  color: var(--invalid-color);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+input {
+  display: block;
+}
+input {
+  height: 2.2rem;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+  outline: 0;
+}
+
+input:focus {
+  background-color: var(--main-bg-color);
+}
+
+input:focus:invalid,
+input:not(:placeholder-shown):invalid {
+  border-bottom: 1px solid var(--invalid-color);
+}
+
+input:focus:valid,
+input:not(:placeholder-shown):valid {
+  border-bottom: 1px solid var(--valid-color);
+}
+
+.bottom-section button {
+  border: 0;
+  border-radius: 7px;
+  padding: 0.9rem 3.3rem;
+  color: #fff;
+  background-color: var(--btn-color-1);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+.bottom-section button:hover {
+  outline: 3px solid var(--btn-color-1);
+  color: var(--btn-color-1);
+  background-color: var(--main-bg-color);
+}
+
+.bottom-section a {
+  display: inline-block;
+  margin-left: 5px;
+  text-decoration: none;
+  color: var(--btn-color-1);
+  transition: all 0.3s;
+}
+.bottom-section a:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  .container-logo {
+    width: 100vw;
+    min-height: 100vh;
+  }
+
+  .container-main {
+    width: 100vw;
+  }
+
+  form div:last-child {
+    margin-top: 2.4rem;
+  }
+
+  .top-section {
+    padding-top: 2rem;
+  }
+
+  .bottom-section {
+    padding-bottom: 2rem;
+  }
+}
